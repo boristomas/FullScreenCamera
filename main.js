@@ -6,12 +6,10 @@ var videoSelect = document.querySelector('select#videoSource');
 var controls = document.getElementById('controls')
 var video = document.getElementById('video');
 document.getElementById("full").addEventListener("click", goFull);
-alert('9');
 
 function goFull() {
   controls.style.display = "none";
   video.className = "videoFull";
-  //video.webkitEnterFullscreen();//.requestFullscreen();
   document.body.requestFullscreen();
 }
 
@@ -27,12 +25,10 @@ function gotDevices(deviceInfos) {
     var option = document.createElement('option');
     option.value = deviceInfo.deviceId;
     if (deviceInfo.kind === 'audioinput') {
-      option.text = deviceInfo.label ||
-        'microphone ' + (audioSelect.length + 1);
+      option.text = deviceInfo.label || 'microphone ' + (audioSelect.length + 1);
       audioSelect.appendChild(option);
     } else if (deviceInfo.kind === 'videoinput') {
-      option.text = deviceInfo.label || 'camera ' +
-        (videoSelect.length + 1);
+      option.text = deviceInfo.label || 'camera ' + (videoSelect.length + 1);
       videoSelect.appendChild(option);
     } else {
       console.log('Found one other kind of source/device: ', deviceInfo);

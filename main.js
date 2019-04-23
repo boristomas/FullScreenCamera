@@ -1,6 +1,7 @@
 'use strict';
 
 var videoElement = document.querySelector('video');
+var audioSelect = document.querySelector('select#audioSource');
 var videoSelect = document.querySelector('select#videoSource');
 var controls = document.getElementById('controls')
 var video = document.getElementById('video');

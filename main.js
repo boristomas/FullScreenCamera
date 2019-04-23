@@ -6,16 +6,13 @@ var videoSelect = document.querySelector('select#videoSource');
 var controls = document.getElementById('controls')
 var video = document.getElementById('video');
 document.getElementById("full").addEventListener("click", goFull);
-alert('8');
+alert('9');
 
 function goFull() {
   controls.style.display = "none";
-   video.className = "videoFull";
+  video.className = "videoFull";
   //video.webkitEnterFullscreen();//.requestFullscreen();
-  
   document.body.requestFullscreen();
-  
-  //document.body.requestFullscreen();
 }
 
 navigator.mediaDevices.enumerateDevices()
